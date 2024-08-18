@@ -1,0 +1,1450 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+    --heading-font-family: Poppins, sans-serif;
+    --content-paragraph-font-family: Mulish, sans-serif;
+    --theme-bg1: #f8f9fa;
+    --theme-bg2: #ffffff;
+    --btn-and-icon-bg: #ffb400;
+    --hover-out: #152035;
+    --text-color: #152035;
+    --content-color: #717272;
+    --theme3:#f1c40f;
+    --shadow-effect: -24px 24px 48px #bebebe,
+    24px -24px 48px #ffffff;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+}
+::selection{
+    color: var(--theme-bg1);
+    background-color:#1192e7;
+}
+
+/* ========== Main heading ==========  */
+h1 {
+    font-size: 40px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--heading-font-family);
+}
+
+/* ========== Main heading ==========  */
+/*============= card heading =============== */
+h2 {
+    font-size: 26px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--heading-font-family);
+}
+
+/*============= card heading =============== */
+
+/*========== card sub heading ============ */
+h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--heading-font-family);
+}
+
+/*========== card sub heading ============ */
+
+/* ========== small heading =========== */
+h5 {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--heading-font-family);
+}
+
+/* ========== small heading =========== */
+/*============ for content ============ */
+p {
+    font-size: 16px;
+    color: var(--content-color);
+    font-family: var(--content-paragraph-font-family);
+}
+
+/*============ for content ============ */
+/*========== span color ============ */
+span {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--content-paragraph-font-family);
+    color: var(--text-color);
+}
+
+/*========== span color ============ */
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+
+/*=========== Header css start ============ */
+
+header {
+    width: 100%;
+    height: 60px;
+    padding: 10px 45px;
+    background-color: var(--btn-and-icon-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--theme-bg2);
+}
+
+nav ul li {
+    position: relative;
+    padding: 8px;
+}
+
+nav ul li::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 8px;
+    transform: scale(0);
+}
+
+.active::after {
+    transform: scale(1);
+}
+
+nav ul li:hover::after {
+    transform: scale(1);
+}
+
+.social-icon ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon ul li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transition: 0.3s;
+}
+
+.social-icon ul li:hover {
+    transform: translateY(-10px);
+}
+
+.social-icon ul li a {
+    color: var(--btn-and-icon-bg);
+
+}
+
+#cross {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-and-icon-bg);
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    display: none;
+}
+
+.menu-bar span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: var(--btn-and-icon-bg);
+    box-shadow: var(--shadow-effect);
+    cursor: pointer;
+    display: none;
+}
+/*=========== Header css end ============== */
+
+/*============ Hero section css start =========== */
+
+#hero-section{
+    width: 100%;
+    height: 100%;
+    padding:70px 45px 45px ;
+    background-color: var(--theme3);
+   display: flex;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+}
+.hero-left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: flex-start;
+    
+}
+.hero-left-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-top: 40px;
+     
+}
+.hero-left-text >span{
+    color: var(--theme-bg2);
+}
+.hero-left-text > h1{
+    color: var(--theme-bg2);
+}
+.hero-left-text> p{
+    color: var(--theme-bg2);
+}
+
+
+.css-btn{
+    width:190px;
+    height: 50px;
+    border-radius: 22px;
+    display: block;
+    position: relative;
+    transition: 0.4s;
+    
+}
+ 
+.css-btn a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-bg2);
+    border-radius: 22px;
+    color: var(--btn-and-icon-bg);
+    position: relative;
+    transition: 0.4s;
+    z-index:444;
+}
+
+.css-btn a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #343a40;
+    bottom: 0%;
+    right: 0%;
+    z-index: -11;
+    border-radius: 22px;
+    transition: 0.4s;
+}
+.css-btn a:hover::before{
+    width: 0%;
+     
+}
+
+.left-email-cont{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+.email >h5{
+    color: var(--theme-bg2);
+}
+.email> span{
+    color: var(--theme-bg2);
+}
+
+/*============ Hero section css end =========== */
+
+/* ============= About us css section start =========== */
+#about-us{
+    width: 100%;
+    height: 100%;
+    padding:70px 45px 45px ;
+    background-color: var(--theme-bg2);
+    
+}
+.about-us-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 40px;
+}
+.about-us-left{
+width: 40%;
+height: 410px;
+border-radius: 16px;
+background: linear-gradient(145deg, #dddddd, #ffffff);
+ 
+}
+.about-us-left img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 16px;
+transition: 0.3s;
+}
+.about-us-left img:hover{
+box-shadow: 12px 9px 13px -5px rgba(209,209,209,0.86);
+-webkit-box-shadow: 12px 9px 13px -5px rgba(209,209,209,0.86);
+-moz-box-shadow: 12px 9px 13px -5px rgba(209,209,209,0.86);
+
+}
+
+.about-us-right{
+width: 60%;
+padding: 30px;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+background-color: var(--theme-bg1);
+border-radius: 16px;
+box-shadow: 12px 9px 10px -1px rgba(209,209,209,0.86);
+-webkit-box-shadow: 12px 9px 10px -1px rgba(209,209,209,0.86);
+-moz-box-shadow: 12px 9px 10px -1px rgba(209,209,209,0.86);
+}
+.about-us-right>h1{
+    font-size: 32px;
+}
+.about-us-right>p{
+   line-height: 24px;
+}
+.about-phone-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+.about-phonee{
+    width: 49%;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 10px;
+}
+.about-phonee> span{
+color: var(--text-color);
+}
+
+.customer-card-container{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+   padding-top: 25px;
+}
+.customer-card{
+    width: 279px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--theme-bg1);
+    border-radius: 20px;
+    box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-webkit-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-moz-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+}
+.customer-card>h1{
+    color: var(--btn-and-icon-bg);
+}
+.customer-card>span{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.experience-section{
+    width: 100%;
+   padding-top: 30px;
+    height: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.experience-one, .experience-two {
+    width: 49%;
+    background-color: var(--theme-bg1);
+    display: flex;
+    padding: 30px;
+    border-radius: 16px;
+   gap: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.experience-one:hover{
+    box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-webkit-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-moz-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+}
+.experience-two:hover{
+    box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-webkit-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+-moz-box-shadow: 12px 12px 11px -7px rgba(209,209,209,0.86);
+}
+.experience-card{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+   
+}
+.exper-card-left{
+    width:20%;
+     
+  
+}
+.exper-card-left> span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-bg2);
+    background-color: var(--btn-and-icon-bg);
+}
+.exper-card-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+.exper-card-right p:nth-child(2){
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--theme-bg2);
+}
+
+
+
+
+/* ============= About us css section end ============= */
+
+
+/* =============== my services css section start ================= */
+
+
+#my-services{
+width: 100%;
+padding: 70px 45px 45px;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+background-color: var(--theme-bg1);
+}
+
+.my-heading{
+display: flex;
+flex-direction: column;
+ 
+}
+.services-card-container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.main-services-card{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--theme-bg2);
+    padding: 30px;
+    border-radius: 16px;
+    align-items: center;
+    text-align: center;
+    box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    -webkit-box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    -moz-box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    } 
+
+.main-services-card>p{
+    line-height: 25px;
+    color: #152035;
+}
+.image-partt{
+    width: 80%;
+    height: 170px;
+}
+.image-partt img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =============== my services css section end ================= */
+
+
+/* ================ My project html section start =============== */
+#project-section{
+    position: relative;
+    width: 100%;
+    padding: 70px 45px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--theme-bg1);
+    }
+
+    .project-card-container{
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .project-main-card{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 30px;
+        border-radius: 16px;
+        background-color: var(--theme-bg2);
+        box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    -webkit-box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    -moz-box-shadow: -13px -8px 47px -4px rgba(209,209,209,0.85);
+    
+}
+    
+    .project-image{
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .project-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        transition: 1s;
+       object-fit: cover;
+    }
+    .project-icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1c40f52;
+    }
+    .project-main-card:hover .project-icon{
+        display: flex;
+    }
+    .icon-hoverr{
+        /* width: 90px; */
+        /* height: 50px; */
+        display: flex;
+        /* transform: scale(0); */
+        padding: 10px 25px;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme-bg1);
+        cursor: pointer;
+        border-radius: 26px;
+        background-color: var(--btn-and-icon-bg);
+    }
+
+    .project-text{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .project-first-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .arrow-icon{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       border: 2px solid var(--text-color);
+      perspective: 800px;
+    }
+    .arrow-icon a{
+        transform: rotate(49deg);
+        font-size: 18px;
+    }
+
+
+    .project-main-card:hover .project-image img{
+        transform: scale(1.2);
+    }
+    .project-main-card:hover .icon-hoverr{
+        transform: scale(1.1);
+    }
+    .project-main-card:hover .project-first-text h3{
+         color: var(--btn-and-icon-bg);
+    }
+    .project-main-card:hover .arrow-icon{
+        border: 2px solid var(--btn-and-icon-bg);
+    }
+    .project-main-card:hover .arrow-icon a{
+        color: var(--btn-and-icon-bg);
+    }
+
+
+.hide-img{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #343a40;
+    opacity: 1;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    left: 0;
+    z-index: 999;
+    display: none;
+  
+}
+.third-box{
+    width: 90vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.hide-img-box{
+    width: 50%;
+    height: 50%;
+  display: flex;
+}
+ 
+.hide-img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.open-box{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--btn-and-icon-bg);
+    border-radius: 50%;
+    top: 70px;
+    right: -68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ================ My project html section end =============== */
+
+/*============ testimonial css section start ============= */
+#testimonial-sect{
+    width: 100%;
+    padding: 70px 45px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--theme-bg2);
+}
+.testimonial-heading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.testimonial-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+ 
+.testimonail-card{
+    width: 90%;
+    background-color: var(--theme-bg1);
+    border-radius: 16px;
+    padding: 30px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    box-shadow: 0 5px 10px 0 rgba(52,58,64,.1);
+}
+.testimonail-card> p{
+    line-height: 25px;
+    text-align: center;
+}
+.profile-area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+.tetimonal-profile{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #dbdbdb;
+}
+.tetimonal-profile::after{
+    content: '';
+    position: absolute;
+    right: -11%;
+  top: 39%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#dbdbdb;
+}
+.tetimonal-profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+   border: 2px solid #dbdbdb;
+   padding: 5px;
+}
+.testimonail-card:hover .tetimonal-profile img{
+    border: 2px solid var(--btn-and-icon-bg);
+}
+.testimonail-card:hover .tetimonal-profile{
+    border: 2px solid var(--btn-and-icon-bg);
+}
+.testimonail-card:hover .tetimonal-profile::after{
+    background-color: var(--btn-and-icon-bg);
+}
+.client-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*============ testimonial css section start ============= */
+
+
+/*============== contact us css section star ============== */
+#contact-us-cont{
+    width: 100%;
+    padding: 70px 45px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--theme-bg2);
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+.contact-heading{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contact-us-left{
+    width: 55%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 30px;
+    background-color: var(--theme-bg1);
+    transition: 0.5s;
+}
+ 
+.contact-us-left:hover{
+    box-shadow: 0 5px 10px 0 rgba(52,58,64,.1);
+}
+.name-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.name-input [type="text"], [type="email"] {
+    width: 50%;
+    height: 50px;
+    border-radius: 16px;
+    padding-left: 20px;
+    background-color: var(--theme-bg2);
+    font-size: 18px;
+}
+#subject{
+    width: 100%;
+    height: 50px;
+    border-radius: 16px;
+    padding-left: 20px;
+    background-color: var(--theme-bg2);
+    font-size: 18px;
+}
+#message{
+    width: 100%;
+    height: 120px;
+    border-radius: 16px;
+    padding-left: 15px;
+    padding-top: 12px;
+    background-color: var(--theme-bg2);
+    font-size: 18px;
+}
+.name-input [type="text"]:focus{
+    outline: 3px solid var(--btn-and-icon-bg);
+    border: 2px solid  skyblue;
+}
+.name-input [type="email"]:focus{
+    outline: 3px solid var(--btn-and-icon-bg);
+    border: 2px solid  skyblue;
+}
+ #subject:focus{
+    outline: 3px solid var(--btn-and-icon-bg);
+    border: 2px solid  skyblue;
+}
+ #message:focus{
+    outline: 3px solid var(--btn-and-icon-bg);
+    border: 2px solid  skyblue;
+}
+ .last-input{
+    width: 150px;
+    height: 50px;    
+  
+ }
+ 
+ .last-input> [type="submit"]{
+    width: 100%;
+    height:100%;
+    border-radius: 16px;
+    background-color: var(--theme-bg2);
+    font-size: 18px;
+    transition: 0.4s;
+ }
+ .last-input> [type="submit"]:hover{
+    background-color: var(--btn-and-icon-bg);
+   color: var(--theme-bg2);
+   cursor: pointer;
+ }
+ 
+ 
+.contact-us-right{
+    width: 45%;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    gap: 0.7rem;
+    border-radius: 16px;
+    background-color: var(--theme-bg1);
+    transition: 0.5s;
+}
+.contact-us-right:hover{
+    box-shadow: 0 5px 10px 0 rgba(52,58,64,.1);
+}
+.contact-us-right>p{
+    line-height: 25px;
+}
+.contact-us-right>h3{
+    font-size: 28px;
+}
+.contact-icon-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.phone-iconn-cont{
+    display: flex;
+    
+    gap: 1rem;
+}
+.phone-iconn-cont>span{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--btn-and-icon-bg);
+    color: var(--theme-bg2);
+}
+
+.last-brand{
+    display: flex;
+    align-items: center;
+}
+.last-brand a{
+ font-size: 20px;
+ transition: 0.4s;
+}
+.last-brand a:hover{
+color: var(--btn-and-icon-bg);
+}
+/*============== contact us css section end ============== */
+
+
+
+/*============== Footer section css start =============== */
+.copy-write{
+    width: 100%;
+    background-color: var(--theme-bg1);
+    text-align: center;
+    padding: 30px 0;
+   
+}
+.copy-write .footer{
+    font-size: 20px;
+    font-weight: 600;
+}
+/*============== Footer section css end =============== */
+
+/* ================ website css section start ================= */
+
+#website_app{
+    width: 100%;
+    padding: 70px 45px 45px;
+    background-color:var(--theme-bg2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.website-main-container{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+}
+.website-heading{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.website-heading> a{
+    color: var(--btn-and-icon-bg);
+}
+.website-left{
+    width: 60%;
+    border-radius: 16px;
+   max-height: 665px;
+}
+.website-left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.website-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ 
+}
+.top-section{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: var(--theme-bg1);
+    box-shadow: 0 5px 10px 0 rgba(52,58,64,.1);
+}
+.top-section>p{
+    line-height: 25px;
+}
+.bottom-section{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: var(--theme-bg1);
+    box-shadow: 0 5px 10px 0 rgba(52,58,64,.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.client-mainn-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.clientt-cont{
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* ================ website css section end ================= */
+
+
+/*============= Previous btn css start ======== */
+
+#button_containerr{
+    width: 94%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     position: absolute;
+     top: 50%;
+     left: 30px;
+    
+   
+}
+#button_containerr .next_btn, .pre_btn{
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%; 
+ background-color: var(--theme-bg2);
+ color: var(--btn-and-icon-bg);
+ cursor: pointer;
+ 
+}
+
+/*============= Previous btn css end======== */
+
+/*=========== Header responsive css start ========== */
+@media screen and (max-width: 894px) {
+  nav {
+     display: none;
+     width: 100%;
+     height:350px;
+     background-color: rgb(141, 141, 141);
+     position: absolute;
+     left: 0%;
+     top: 100%;
+     padding-top: 15px;
+     z-index: 444;
+  }
+  nav.active{
+    display: flex;
+  }
+
+  #cross {
+     position: absolute;
+     top: 5%;
+     right: 5%;
+     display: flex;
+     cursor: pointer;
+  }
+
+  #cross span {
+     font-size: 22px;
+     font-weight: 600;
+  }
+
+  #cross span:hover {
+     color: var(--theme-bg2);
+  }
+
+  nav ul {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 1rem;
+  }
+
+  .menu-bar span {
+     display: flex;
+  }
+}
+
+@media screen and (max-width: 336px) {
+  header {
+     gap: 1rem;
+  }
+  .menu-bar span {
+     background-color: rgb(47, 49, 50);
+  }
+}
+
+/*=========== Header responsive css start ========== */
+
+/*============ Hero section responsive start ============== */
+
+@media screen and (max-width: 766px){
+  #hero-section{ 
+    /* background: url(../vendor/card-img/hero10.jpg) no-repeat center center / cover; */
+ }
+}
+
+@media screen and (max-width: 640px){
+  .hero-left-text{
+  padding-top:0px;
+ }
+ .left-email-cont{
+  flex-direction: column;
+  gap: 1rem;
+ 
+ }
+ h1{
+  font-size: 32px
+ };
+}
+/* vendor/card-img/hero11.jpg */
+@media screen and (max-width: 630px){
+  #hero-section{ 
+    /* background: url(../card-img/hero11.jpg) no-repeat center center / cover; */
+ }
+}
+/*============ Hero section responsive end ============== */
+
+/*=============  About us section responsive start =========== */
+@media screen and (max-width:1148px){
+  .about-us-left {
+     width: 100%;
+  }
+  .about-us-right {
+     width: 100%; 
+  }
+  .about-us-container {
+    flex-direction: column;
+  }
+  .about-phone-container {
+     flex-direction: column;
+  }
+  .about-phonee {
+     width: 100%; 
+  }
+}
+
+@media screen and (max-width:424px){
+  #about-us {
+     padding: 100px 25px 25px; 
+  }
+}
+
+@media screen and (max-width:390px){
+  .about-phonee {
+     flex-direction: column;
+     gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width:1266px){
+  .customer-card {
+     width: 540px;
+     padding: 20px;
+     align-items: center;
+     justify-content: center;
+  }
+}
+
+@media screen and (max-width:1198px){
+  .customer-card {
+     width: 500px;
+     padding: 20px;
+     align-items: center;
+     justify-content: center;
+  }
+  .customer-card-container {
+     align-items: center;
+     justify-content: center;
+  }
+}
+
+@media screen and (max-width:1110px){
+  .customer-card {
+     width: 450px;
+  }
+}
+
+@media screen and (max-width:1010px){
+  .customer-card {
+     width: 380px;
+  } 
+}
+
+@media screen and (max-width:924px){
+  .customer-card {
+     width: 800px;
+  }
+}
+
+@media screen and (max-width:676px){
+  .customer-card {
+     width: 539px;
+  } 
+}
+
+@media screen and (max-width:930px){
+  .experience-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:930px){
+  .experience-one{
+     width: 100%;
+     padding: 15px;
+  }
+  .experience-two {
+     width: 100%;
+     padding: 15px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .experience-one{
+     padding: 15px;
+  }
+  .experience-two {
+     padding: 15px;
+  }
+}
+
+/*=============  About us section responsive end =========== */
+
+
+/*============= My services responsive section start ========== */
+@media screen and (max-width:1050px){
+  .main-services-card {
+   width: 48%;  
+  }
+}
+
+@media screen and (max-width:888px){
+  .main-services-card {
+     width: 100%;
+  }
+  .services-card-container {
+     align-items: center;
+     justify-content: center;
+  }  
+}
+
+@media screen and (max-width:740px){
+  .image-partt {
+     min-height: auto;
+  }
+  .main-services-card {
+     padding: 20px;
+  }
+}
+
+@media screen and (max-width:424px){
+  #my-services {
+     padding: 100px 25px 25px;
+     
+  } 
+}
+
+/*============= My services responsive section end ========== */
+
+
+/*=========== My project responsive start ============= */
+@media screen and (max-width:1048px){
+  .project-main-card {
+     width: 47%;
+  }
+}
+@media screen and (max-width:888px){
+  .project-main-card {
+     width: 100%;
+   
+  }
+  .project-image {
+   max-height: 250px;
+  }
+}
+
+@media screen and (max-width:424px){
+  #project-section {
+     padding: 70px 25px 25px;
+     
+  } 
+  .project-image {
+     max-height:auto;
+    }
+}
+/*=========== My project responsive start ============= */
+
+/*=========== testimonial responsive section start =========== */
+/* @media screen and (max-width:960px){
+  .testimonail-card{
+     width: 400px;
+  }
+} */
+
+
+/*=========== testimonial responsive section end =========== */
+
+
+/* ========= contact us responseve section start ========= */
+
+@media screen and (max-width:1070px){
+  .contact-container{
+    flex-direction: column;
+ }
+
+ .contact-us-left{
+  width: 100%;
+}
+ .contact-us-right{
+  width: 100%;
+}
+}
+
+@media screen and (max-width:522px){
+  
+
+  .name-input {
+   flex-direction: column;
+  }
+  .name-input [type="text"], [type="email"] {
+     width: 100%;
+   
+  }
+  .contact-us-left{
+    padding: 20px;
+  }
+    .contact-us-right{
+     padding: 20px;
+  }
+  
+}
+
+@media screen and (max-width:424px){
+  #contact-us-cont {
+     padding: 100px 25px 25px;
+     
+  } 
+  .project-image {
+     max-height:auto;
+    }
+}
+/* ========= contact us responseve section end ========= */
+
+/*============== cosmetic section responsive start ================= */
+
+@media screen and (max-width:1114px){
+  .website-main-container{
+    flex-direction: column;
+  }
+  .website-left{
+     width: 100%;
+ }
+ .website-right{
+  width: 100%;
+}
+}
+
+@media screen and (max-width:1114px){
+  #website_app{
+     padding: 100px 25px 25px;
+ }
+}
+
+
+/*============== cosmetic section responsive end ================= */
+
+
+/*=============== Floating image responsive start ============= */
+@media screen and (max-width:820px){
+  .third-box{
+     width: 100%;
+     flex-direction: column;
+     gap: 2rem;
+     
+     padding: 30px;
+     padding-top: 136px;
+ }
+ .hide-img-box{
+     width: 100%;
+     height: 100%;
+    
+ }
+ .open-box{
+  top: 74px;
+ left: 50%;
+
+}
+
+}
+/* @media screen and (max-width:585px){
+  .hide-img-box{
+     
+     min-width: 350px;
+    
+ }
+} */
+/*=============== Floating image responsive end ============= */
+
+
